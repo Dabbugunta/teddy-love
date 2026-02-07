@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Answer Honestly 😄</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(16, 134, 124);
+            font-family: Arial, sans-serif;
+        }
+
+
+        .card {
+            width: 500px;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            background: white;
+            border: 3px solid #fe2b52;
+            box-shadow: 0 0 15px #ff4d6d;
+        }
+
+
+
+        #box {
+            text-align:center;
+            
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #333;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        #yes {
+            background-color: #28a745;
+            color: white;
+        }
+
+        #no {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
+
+        #teddy {
+            display: none;
+            margin-top: 20px;
+        }
+
+        img {
+            width: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Ammu , Will you be my valentine ? 💖</h1>
+        <p class="hint">Choose wisely (The "No" button is shy)</p>
+
+        <div id="box">
+
+        <button id="yes" onclick="showTeddy()">YES</button>
+        <button id="no" onmouseover="moveNo()">NO</button>
+
+        <div id="teddy">
+            <h2>Yayyyy 🥰</h2>
+            <img src="https://media.tenor.com/2bw-Zzp-mTMAAAAm/bear-hug.webp" alt="Teddy Hug">
+            <h2> I Love You 💞 </h2>
+        </div>
+
+    </div>
+
+    </div>
+
+
+    
+
+
+    <script>
+        function moveNo() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+
+            let noBtn = document.getElementById("no");
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        }
+
+        function showTeddy() {
+            document.getElementById("teddy").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
